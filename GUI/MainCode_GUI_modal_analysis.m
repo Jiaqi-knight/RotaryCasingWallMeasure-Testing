@@ -82,7 +82,7 @@ set(varargin{3}.finame,'string',fullfile(location,fname)) % Set edit to current 
 set(varargin{3}.tg,'enable','on');  % Turn on 'Fit' tab.
 mic_transform_ab= xlsread(fullfile(location2b,fname2b));
 DATA=(double(data(:,mic_transform_ab(:,2)))/(2^15)*10)/0.05;
-save_directory = ['608matData',date];  %频谱图存储文件夹
+save_directory = ['matData',date];  %频谱图存储文件夹
 if ~exist(save_directory)
     mkdir(save_directory)
 else
@@ -174,7 +174,7 @@ Fs=str2num(varargin{3}.chtotal2.String);
 Blade=str2num(varargin{3}.chtotal3.String);
 [data,Fs]= audioread(fullfile(location,fname),'native'); %选择文件导入数据
 mic_transform_ab=xlsread(fullfile(location2b,fname2b));
-save_directory = ['608matData',date];  %频谱图存储文件夹
+save_directory = ['matData',date];  %频谱图存储文件夹
 if ~exist(save_directory)
     mkdir(save_directory)
 else
